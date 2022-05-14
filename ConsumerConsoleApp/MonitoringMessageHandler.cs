@@ -19,9 +19,9 @@ namespace ConsumerConsoleApp
             counter = new Dictionary<string, int>();
         }
 
-        public void Subscribe(string topic)
+        public void Subscribe(string topic, CancellationToken cancelToken)
         {
-            base.Subscribe(topic, Handle);
+            base.Subscribe(topic, Handle, cancelToken);
         }
 
         private void Handle(KeyValuePair<string, int> message)

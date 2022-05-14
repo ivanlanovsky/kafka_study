@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,9 +15,9 @@ namespace ConsumerConsoleApp
             reservoir = new KeyValuePair<string, int>[capacity];
             counter = 0;
         }
-        public void Subscribe(string topic)
+        public void Subscribe(string topic, CancellationToken cancelToken)
         {
-            base.Subscribe(topic, Handle);
+            base.Subscribe(topic, Handle, cancelToken);
         }
 
         private void Handle(KeyValuePair<string, int> message)

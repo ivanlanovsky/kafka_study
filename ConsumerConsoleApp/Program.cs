@@ -9,8 +9,16 @@ namespace ConsumerConsoleApp
         static void Main(string[] args)
         {
             var messageHandler = new ReservoirMessageHandler(5);
-            messageHandler.Subscribe("numbers-topic");
-            messageHandler.Dispose();
+            var cts = new CancellationTokenSource();
+            new Thread(delegate () { messageHandler.Subscribe("numbers-topic", cts.Token); }).Start();
+            while (true)
+            {
+                if(Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    break;
+                }
+            }
+            cts.Cancel();
         }
     }
 }

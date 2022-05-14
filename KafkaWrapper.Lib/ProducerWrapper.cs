@@ -19,8 +19,7 @@ namespace KafkaWrapper.Lib
         }
         public ProducerWrapper(string hostname)
         {
-            var producerConfig = new Dictionary<string, string> { { "bootstrap.servers", hostname } };
-            _producer = new ProducerBuilder<string, int>(producerConfig)
+            _producer = new ProducerBuilder<string, int>(new Dictionary<string, string> { { "bootstrap.servers", hostname } })
                             .SetKeySerializer(Serializers.Utf8)
                             .SetValueSerializer(Serializers.Int32).Build();
         }

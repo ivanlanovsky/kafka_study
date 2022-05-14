@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,9 +11,9 @@ namespace ConsumerConsoleApp
         {
         }
 
-        new public void Subscribe(string topicName, Action<KeyValuePair<string, int>> action)
+        new public void Subscribe(string topicName, Action<KeyValuePair<string, int>> action, CancellationToken cancelToken)
         {
-            base.Subscribe(topicName, action);
+            base.Subscribe(topicName, action, cancelToken);
         }
     }
 }

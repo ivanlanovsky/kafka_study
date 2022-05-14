@@ -9,12 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaWrapper.Lib", "KafkaWr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProducerConsoleApp", "ConsoleApp\ProducerConsoleApp.csproj", "{0A5631F3-8916-4E30-97F0-93A772D55C04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerConsoleApp", "ConsumerConsoleApp\ConsumerConsoleApp.csproj", "{2089E273-1E10-4D40-849F-5A0E428918A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumerConsoleApp", "ConsumerConsoleApp\ConsumerConsoleApp.csproj", "{2089E273-1E10-4D40-849F-5A0E428918A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50DF2A8B-6975-4859-9F22-2B87A589D47D}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
